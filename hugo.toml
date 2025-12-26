@@ -1,0 +1,43 @@
+baseURL = 'https://github.com/anhkhoa1310/HuynhAnhKhoa_Blog.git/'
+publishDir = 'docs'
+languageCode = 'vi'
+title = 'Huỳnh Anh Khoa'
+theme = "PaperMod"
+
+canonifyURLs = true
+
+[params]
+  defaultTheme = "light"
+  ShowReadingTime = true
+  ShowShareButtons = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Trang Chủ"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Bài Viết"
+    url = "/posts/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "about"
+    name = "Giới Thiệu"
+    url = "/about/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Liên Hệ"
+    url = "/contact/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "https://drive.google.com/file/d/1RgnPTwcMSXdgxbAq8_djPUjEExtqdqtP/view?usp=drive_link"
+    weight = 50
