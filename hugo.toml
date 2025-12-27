@@ -4,7 +4,9 @@ languageCode = 'vi'
 title = 'Huỳnh Anh Khoa'
 theme = "PaperMod"
 
-canonifyURLs = true
+# Sửa lại 2 dòng này để nhận CSS trên GitHub Pages
+canonifyURLs = false
+relativeURLs = true
 
 [params]
   defaultTheme = "light"
@@ -21,19 +23,19 @@ canonifyURLs = true
   [[menu.main]]
     identifier = "posts"
     name = "Bài Viết"
-    url = "/posts/"
+    url = "posts/"
     weight = 20
 
   [[menu.main]]
     identifier = "about"
     name = "Giới Thiệu"
-    url = "/about/"
+    url = "about/"
     weight = 30
 
   [[menu.main]]
     identifier = "contact"
     name = "Liên Hệ"
-    url = "/contact/"
+    url = "contact/"
     weight = 40
 
   [[menu.main]]
