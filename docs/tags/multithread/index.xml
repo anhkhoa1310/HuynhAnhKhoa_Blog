@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Multithread on Huỳnh Anh Khoa</title>
+    <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/multithread/</link>
+    <description>Recent content in Multithread on Huỳnh Anh Khoa</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/multithread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xử lý đa luồng cho Server Socket</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-4/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-4/</guid>
+      <description>&lt;p&gt;Kỹ thuật đa luồng giúp Server xử lý nhiều Client đồng thời mà không bị nghẽn.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-mô-hình-xử-lý&#34;&gt;1. Mô hình xử lý&lt;/h2&gt;
+&lt;p&gt;Mỗi kết nối sẽ được tách ra một Thread riêng để xử lý độc lập.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

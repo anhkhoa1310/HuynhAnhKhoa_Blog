@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Socket on Huỳnh Anh Khoa</title>
+    <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/socket/</link>
+    <description>Recent content in Socket on Huỳnh Anh Khoa</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xây dựng Server Echo với TCP Socket</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-2/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-2/</guid>
+      <description>Hướng dẫn xây dựng Server Echo đơn giản để hiểu cách trao đổi dữ liệu qua giao thức TCP Socket trong Java.</description>
+    </item>
+  </channel>
+</rss>

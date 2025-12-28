@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý địa chỉ IP với InetAddress | Huỳnh Anh Khoa</title>
+    <link rel="icon" href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+         
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #e0e7ff;
+            --bg-body: #ffffff;
+            --bg-section: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.8; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }  
+        a { text-decoration: none; transition: 0.3s; }
+
+         
+        .header {
+            padding: 15px 0; background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .logo { font-size: 1.25rem; font-weight: 800; color: var(--text-main); }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; align-items: center; gap: 20px; }
+        .nav-link { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+        .nav-link:hover { color: var(--primary); }
+        .cv-button { color: var(--primary) !important; border: 1.5px solid var(--primary); padding: 8px 16px; border-radius: 8px; font-size: 0.85rem !important; }
+        .github-btn { background: var(--text-main); color: #fff !important; padding: 10px 20px; border-radius: 10px; font-size: 0.85rem !important; }
+
+         
+        .post-page { padding: 60px 0 100px; }
+        .back-nav { margin-bottom: 40px; }
+        .back-link { color: var(--text-muted); font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; }
+        .back-link:hover { color: var(--primary); transform: translateX(-5px); }
+
+         
+        .post-header { text-align: center; margin-bottom: 50px; }
+        .post-category { display: inline-block; background: var(--primary-light); color: var(--primary); font-weight: 800; font-size: 0.75rem; padding: 6px 16px; border-radius: 50px; text-transform: uppercase; margin-bottom: 20px; }
+        .post-title { font-size: 2.8rem; font-weight: 800; line-height: 1.2; letter-spacing: -1px; margin-bottom: 20px; color: var(--text-main); }
+        .post-meta { color: var(--text-muted); font-size: 0.95rem; font-weight: 500; display: flex; justify-content: center; gap: 25px; border-top: 1px dashed var(--border); border-bottom: 1px dashed var(--border); padding: 15px 0; }
+
+         
+        .post-content { font-size: 1.15rem; color: #334155; line-height: 1.8; margin-top: 40px; }
+        .post-content h2 { font-size: 1.8rem; font-weight: 800; margin: 50px 0 20px; color: var(--text-main); border-left: 5px solid var(--primary); padding-left: 15px; }
+        .post-content h3 { font-size: 1.4rem; font-weight: 700; margin: 35px 0 15px; color: var(--text-main); }
+        .post-content p { margin-bottom: 25px; }
+        
+         
+        .post-content pre { 
+            background: #0f172a; color: #f8fafc; padding: 25px; border-radius: 16px; 
+            overflow-x: auto; margin: 40px 0; font-family: 'Consolas', 'Monaco', monospace; font-size: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #334155;
+        }
+        .post-content code { background: #f1f5f9; color: #ef4444; padding: 2px 8px; border-radius: 6px; font-size: 0.9em; font-weight: 600; }
+        .post-content pre code { background: transparent; color: inherit; padding: 0; font-weight: 400; border: none; box-shadow: none; }
+
+         
+        .post-content img { max-width: 100%; height: auto; border-radius: 20px; margin: 40px auto; display: block; box-shadow: var(--shadow); border: 1px solid var(--border); }
+
+         
+        .post-content blockquote { padding: 25px 30px; background: var(--bg-section); border-left: 5px solid var(--primary); border-radius: 12px; font-style: italic; margin: 40px 0; color: var(--text-muted); }
+
+         
+        .footer { padding: 80px 0 40px; border-top: 1px solid var(--border); background: var(--bg-section); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1.2fr; gap: 60px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .footer h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; }
+        .footer-links li { list-style: none; margin-bottom: 12px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem; }
+        .social-bar { display: flex; gap: 12px; margin-top: 25px; }
+        .social-link { width: 42px; height: 42px; background: #fff; border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: 0.3s; }
+        .social-link:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+
+        @media (max-width: 768px) { 
+            .post-title { font-size: 2rem; } 
+            .nav-links { display: none; }
+            .post-wrapper { padding: 20px; }
+            .container { padding: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/" class="logo">ALPHA<span>.DETAIL</span></a>
+            <nav class="nav-links">
+                <a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/" class="nav-link">TRANG CHỦ</a>
+                <a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts" class="nav-link active">BÀI VIẾT</a>
+                <a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/about" class="nav-link">GIỚI THIỆU</a>
+                <a href="https://drive.google.com/file/d/1FAx9Ptr94sf7BWjTb66I63RCZ5PErmPS/view?usp=sharing" class="nav-link cv-button" target="_blank"><i class="fas fa-file-download"></i> TẢI CV</a>
+                <a href="https://github.com/anhkhoa1310" target="_blank" class="github-btn">GITHUB</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="post-page">
+        <div class="container">
+            <nav class="back-nav">
+                <a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                </a>
+            </nav>
+
+            <header class="post-header">
+                <span class="post-category">IP</span>
+                <h1 class="post-title">Quản lý địa chỉ IP với InetAddress</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar-alt"></i> 28/12/2025</span>
+                    <span><i class="far fa-clock"></i> 1 phút đọc</span>
+                </div>
+            </header>
+
+            <article class="post-content">
+                <p><em>(Sử dụng nội dung y hệt file mẫu mày gửi để đảm bảo tính đồng nhất)</em></p>
+
+            </article>
+
+            <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
+                <a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts" class="back-btn" style="background: var(--primary); color: #fff; padding: 15px 35px; border-radius: 12px; font-weight: 700; display: inline-block; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);">
+                    TIẾP TỤC KHÁM PHÁ CÁC BÀI VIẾT KHÁC
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>ALPHA<span>.</span></h3>
+                <p>Kiến tạo giải pháp công nghệ từ sự chỉn chu và tâm huyết.</p>
+                <div class="social-bar">
+                    <a href="https://github.com/anhkhoa1310" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/khoa.huynhanh.37853" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:hhuynhkhanhlinh2@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">KHÁM PHÁ</h4>
+                <ul class="footer-links">
+                    <li><a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/">Trang chủ</a></li>
+                    <li><a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts">Bài viết</a></li>
+                    <li><a href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/about">Giới thiệu</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">LIÊN HỆ</h4>
+                <ul class="footer-links">
+                    <li>Zalo: 0346 204 744</li>
+                    <li>Thành phố Hồ Chí Minh</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 60px; font-size: 0.75rem; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 20px; max-width: 1100px;">
+            © 2025 HUYNH ANH KHOA.
+        </div>
+    </footer>
+</body>
+</html>

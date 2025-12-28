@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>IP on Huỳnh Anh Khoa</title>
+    <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/ip/</link>
+    <description>Recent content in IP on Huỳnh Anh Khoa</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/ip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quản lý địa chỉ IP với InetAddress</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-7/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-7/</guid>
+      <description>&lt;p&gt;&lt;em&gt;(Sử dụng nội dung y hệt file mẫu mày gửi để đảm bảo tính đồng nhất)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

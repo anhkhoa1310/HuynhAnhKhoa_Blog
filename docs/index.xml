@@ -6,6 +6,99 @@
     <description>Recent content on Huỳnh Anh Khoa</description>
     <generator>Hugo -- 0.153.2</generator>
     <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giao thức HTTP và đọc dữ liệu từ URL</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-8/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-8/</guid>
+      <description>&lt;p&gt;Hướng dẫn dùng Java để tải mã nguồn HTML từ một địa chỉ web bất kỳ.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lập trình kết nối Cơ sở dữ liệu Java</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-1/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-1/</guid>
+      <description>Hướng dẫn chi tiết cách thiết lập kết nối JDBC để quản lý và truy xuất dữ liệu trong ứng dụng Java.</description>
+    </item>
+    <item>
+      <title>Lập trình tính toán số học qua mạng</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-3/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-3/</guid>
+      <description>&lt;p&gt;Bài viết này hướng dẫn cách gửi các con số và nhận kết quả tính toán từ Server.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-logic-xử-lý&#34;&gt;1. Logic xử lý&lt;/h2&gt;
+&lt;p&gt;Client gửi hai số &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt; và toán tử. Server thực hiện phép tính và trả về giá trị.&lt;/p&gt;
+&lt;h2 id=&#34;2-mã-nguồn-xử-lý-tại-server&#34;&gt;2. Mã nguồn xử lý tại Server&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; in.&lt;span style=&#34;color:#a6e22e&#34;&gt;readInt&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; in.&lt;span style=&#34;color:#a6e22e&#34;&gt;readInt&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tong &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;out.&lt;span style=&#34;color:#a6e22e&#34;&gt;writeInt&lt;/span&gt;(tong);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Quản lý địa chỉ IP với InetAddress</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-7/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-7/</guid>
+      <description>&lt;p&gt;&lt;em&gt;(Sử dụng nội dung y hệt file mẫu mày gửi để đảm bảo tính đồng nhất)&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Triệu gọi từ xa với Java RMI</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-9/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-9/</guid>
+      <description>&lt;p&gt;RMI cho phép gọi hàm của đối tượng ở máy khác như máy cục bộ.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Truyền nhận dữ liệu với giao thức UDP</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-5/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-5/</guid>
+      <description>&lt;p&gt;UDP là giao thức không hướng kết nối, giúp truyền dữ liệu cực nhanh.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-lớp-datagramsocket&#34;&gt;1. Lớp DatagramSocket&lt;/h2&gt;
+&lt;p&gt;Sử dụng &lt;code&gt;DatagramPacket&lt;/code&gt; để đóng gói mảng byte trước khi gửi đi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xây dựng Server Echo với TCP Socket</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-2/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-2/</guid>
+      <description>Hướng dẫn xây dựng Server Echo đơn giản để hiểu cách trao đổi dữ liệu qua giao thức TCP Socket trong Java.</description>
+    </item>
+    <item>
+      <title>Xây dựng ứng dụng Chat Console</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-6/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-6/</guid>
+      <description>&lt;p&gt;Sử dụng Socket TCP để xây dựng phòng chat đơn giản giữa hai máy tính.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xử lý chuỗi và bảo mật luồng dữ liệu</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</guid>
+      <description>&lt;p&gt;Các lưu ý quan trọng về việc đóng Socket và bảo mật dữ liệu truyền đi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xử lý đa luồng cho Server Socket</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-4/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-4/</guid>
+      <description>&lt;p&gt;Kỹ thuật đa luồng giúp Server xử lý nhiều Client đồng thời mà không bị nghẽn.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-mô-hình-xử-lý&#34;&gt;1. Mô hình xử lý&lt;/h2&gt;
+&lt;p&gt;Mỗi kết nối sẽ được tách ra một Thread riêng để xử lý độc lập.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giới Thiệu</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/about/</guid>
+      <description>Huỳnh Anh Khoa</description>
+    </item>
   </channel>
 </rss>

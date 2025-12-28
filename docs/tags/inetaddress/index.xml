@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>InetAddress on Huỳnh Anh Khoa</title>
+    <link>http://localhost:1313/HuynhAnhKhoa_Blog/tags/inetaddress/</link>
+    <description>Recent content in InetAddress on Huỳnh Anh Khoa</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/HuynhAnhKhoa_Blog/tags/inetaddress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Phân giải IP và Domain với InetAddress</title>
+      <link>http://localhost:1313/HuynhAnhKhoa_Blog/posts/bai-7.md/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/HuynhAnhKhoa_Blog/posts/bai-7.md/</guid>
+      <description>Cách lấy địa chỉ IP của một website hoặc thông tin máy chủ từ xa trong Java.</description>
+    </item>
+  </channel>
+</rss>

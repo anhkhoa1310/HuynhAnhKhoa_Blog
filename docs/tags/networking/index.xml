@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Networking on Huỳnh Anh Khoa</title>
+    <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/networking/</link>
+    <description>Recent content in Networking on Huỳnh Anh Khoa</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Truyền nhận dữ liệu với giao thức UDP</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-5/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-5/</guid>
+      <description>&lt;p&gt;UDP là giao thức không hướng kết nối, giúp truyền dữ liệu cực nhanh.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-lớp-datagramsocket&#34;&gt;1. Lớp DatagramSocket&lt;/h2&gt;
+&lt;p&gt;Sử dụng &lt;code&gt;DatagramPacket&lt;/code&gt; để đóng gói mảng byte trước khi gửi đi.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

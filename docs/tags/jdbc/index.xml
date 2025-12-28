@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JDBC on Huỳnh Anh Khoa</title>
+    <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/jdbc/</link>
+    <description>Recent content in JDBC on Huỳnh Anh Khoa</description>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/jdbc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lập trình kết nối Cơ sở dữ liệu Java</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-1/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-1/</guid>
+      <description>Hướng dẫn chi tiết cách thiết lập kết nối JDBC để quản lý và truy xuất dữ liệu trong ứng dụng Java.</description>
+    </item>
+  </channel>
+</rss>
