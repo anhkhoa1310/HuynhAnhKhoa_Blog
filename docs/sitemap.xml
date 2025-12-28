@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/HuynhAnhKhoa_Blog/categories/</loc>
+    <loc>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/HuynhAnhKhoa_Blog/</loc>
+    <loc>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/</loc>
   </url><url>
-    <loc>http://localhost:1313/HuynhAnhKhoa_Blog/tags/</loc>
+    <loc>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/tags/</loc>
   </url>
 </urlset>
