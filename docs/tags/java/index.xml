@@ -31,5 +31,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;out.&lt;span style=&#34;color:#a6e22e&#34;&gt;writeInt&lt;/span&gt;(tong);
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
+    <item>
+      <title>Xử lý đa luồng cho Server Socket</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</guid>
+      <description>Kỹ thuật tối ưu giúp Server xử lý đồng thời nhiều kết nối Client, giải quyết bài toán nghẽn cổ chai trong lập trình mạng.</description>
+    </item>
   </channel>
 </rss>

@@ -15,5 +15,12 @@
       <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-2/</guid>
       <description>Hướng dẫn xây dựng Server Echo đơn giản để hiểu cách trao đổi dữ liệu qua giao thức TCP Socket trong Java.</description>
     </item>
+    <item>
+      <title>Xử lý đa luồng cho Server Socket</title>
+      <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</link>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</guid>
+      <description>Kỹ thuật tối ưu giúp Server xử lý đồng thời nhiều kết nối Client, giải quyết bài toán nghẽn cổ chai trong lập trình mạng.</description>
+    </item>
   </channel>
 </rss>

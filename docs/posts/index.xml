@@ -77,11 +77,11 @@
       <description>&lt;p&gt;Sử dụng Socket TCP để xây dựng phòng chat đơn giản giữa hai máy tính.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Xử lý chuỗi và bảo mật luồng dữ liệu</title>
+      <title>Xử lý đa luồng cho Server Socket</title>
       <link>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</link>
       <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/posts/bai-10/</guid>
-      <description>&lt;p&gt;Các lưu ý quan trọng về việc đóng Socket và bảo mật dữ liệu truyền đi.&lt;/p&gt;</description>
+      <description>Kỹ thuật tối ưu giúp Server xử lý đồng thời nhiều kết nối Client, giải quyết bài toán nghẽn cổ chai trong lập trình mạng.</description>
     </item>
     <item>
       <title>Xử lý đa luồng cho Server Socket</title>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xử lý chuỗi và bảo mật luồng dữ liệu | Huỳnh Anh Khoa</title>
+    <title>Xử lý đa luồng cho Server Socket | Huỳnh Anh Khoa</title>
     <link rel="icon" href="https://anhkhoa1310.github.io/HuynhAnhKhoa_Blog/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -114,17 +114,62 @@
             </nav>
 
             <header class="post-header">
-                <span class="post-category">Security</span>
-                <h1 class="post-title">Xử lý chuỗi và bảo mật luồng dữ liệu</h1>
+                <span class="post-category">MULTITHREAD</span>
+                <h1 class="post-title">Xử lý đa luồng cho Server Socket</h1>
                 <div class="post-meta">
                     <span><i class="far fa-calendar-alt"></i> 28/12/2025</span>
-                    <span><i class="far fa-clock"></i> 1 phút đọc</span>
+                    <span><i class="far fa-clock"></i> 2 phút đọc</span>
                 </div>
             </header>
 
             <article class="post-content">
-                <p>Các lưu ý quan trọng về việc đóng Socket và bảo mật dữ liệu truyền đi.</p>
-
+                <p>Trong môi trường thực tế, một máy chủ không bao giờ chỉ phục vụ một người dùng duy nhất. Thách thức lớn nhất đối với lập trình viên mạng là làm thế nào để Server có thể phản hồi hàng nghìn yêu cầu cùng lúc mà không làm gián đoạn lẫn nhau.</p>
+<hr>
+<h2 id="1-mô-hình-xử-lý-đa-luồng-multi-threading">1. Mô hình xử lý Đa luồng (Multi-threading)</h2>
+<p>Mô hình xử lý truyền thống (Sequential) chỉ cho phép một kết nối tại một thời điểm. Với kỹ thuật Multi-threading, mỗi khi một Client kết nối thành công, Server sẽ tạo ra một luồng (Thread) riêng biệt để phục vụ Client đó.</p>
+<p><strong>Quy trình vận hành:</strong></p>
+<ol>
+<li><strong>Main Thread:</strong> Liên tục lắng nghe tại cổng (ServerSocket).</li>
+<li><strong>Accept:</strong> Khi có kết nối, gọi phương thức <code>.accept()</code>.</li>
+<li><strong>Spawn Thread:</strong> Khởi tạo một đối tượng thực thi luồng mới và bàn giao Socket của Client đó cho luồng con.</li>
+<li><strong>Independent Work:</strong> Luồng con xử lý dữ liệu độc lập trong khi Luồng chính quay lại lắng nghe Client tiếp theo.</li>
+</ol>
+<hr>
+<h2 id="2-mã-nguồn-thực-thi-tại-server">2. Mã nguồn thực thi tại Server</h2>
+<p>Dưới đây là cấu trúc mã nguồn tiêu biểu cho một Server đa luồng trong Java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.*;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.*;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MultiThreadedServer</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>        ServerSocket serverSocket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServerSocket(1234);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Server is running on port 1234...&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>            Socket clientSocket <span style="color:#f92672">=</span> serverSocket.<span style="color:#a6e22e">accept</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;New client connected!&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Khởi tạo luồng mới cho mỗi Client</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">new</span> ClientHandler(clientSocket).<span style="color:#a6e22e">start</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClientHandler</span> <span style="color:#66d9ef">extends</span> Thread {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Socket socket;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ClientHandler</span>(Socket socket) { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">socket</span> <span style="color:#f92672">=</span> socket; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Logic xử lý dữ liệu riêng biệt cho mỗi Client ở đây</span>
+</span></span><span style="display:flex;"><span>            DataInputStream in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DataInputStream(socket.<span style="color:#a6e22e">getInputStream</span>());
+</span></span><span style="display:flex;"><span>            String message <span style="color:#f92672">=</span> in.<span style="color:#a6e22e">readUTF</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Message from client: &#34;</span> <span style="color:#f92672">+</span> message);
+</span></span><span style="display:flex;"><span>            socket.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) { e.<span style="color:#a6e22e">printStackTrace</span>(); }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
             </article>
 
             <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border);">
